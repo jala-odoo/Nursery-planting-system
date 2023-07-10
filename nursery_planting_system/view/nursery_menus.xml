@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <menuitem id="nursery_planting_root_menu" name="Nursery_planting_system">
+      <menuitem id="nursery_planting_first_level_menu" name="Plant Properties">
+         <menuitem id="nursery_planting_second_level_menu" name="view plant types" action="plant_model_action"/>
+      </menuitem>
+      <menuitem id="menu_set_up" name="menu set up" action="plant_model_action">
+      </menuitem>
+   </menuitem>
+</odoo>

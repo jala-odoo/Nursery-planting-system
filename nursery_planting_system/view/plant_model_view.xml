@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="plant_model_action" model="ir.actions.act_window">
+    <field name="name">Plant Model</field>
+    <field name="res_model">plant.model</field>
+    <field name="view_mode">tree</field>
+  </record>
+  <!-- tree view -->
+  <record id="plant_model_tree_view" model="ir.ui.view">
+    <field name="name">plant.model.tree.view</field>
+    <field name="model">plant.model</field>
+    <field name="arch" type="xml">
+      <tree string="plant properties">
+        <field name="plant_ID"/>
+        <field name="name"/>   
+        <field name="type"/>
+        <field name="species"/>
+        <field name="price"/>
+      </tree>
+    </field>
+  </record>
+</odoo>

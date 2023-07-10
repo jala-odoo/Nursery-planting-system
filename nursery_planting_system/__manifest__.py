@@ -3,10 +3,12 @@
     'author' : "jala",
     'version' : '1.0',
 
-    'depends' : ['base'],
+    'depends' : [],
     'application' : True,
 
     'data' : [
        'security/ir.model.access.csv',
+       'view/plant_model_view.xml',
+       'view/nursery_menus.xml',
     ]
 }
