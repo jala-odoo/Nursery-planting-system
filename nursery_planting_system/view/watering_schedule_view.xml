@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="watering_schedule_action" model="ir.actions.act_window">
+    <field name="name">Watering Schedule</field>
+    <field name="res_model">watering.schedule</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+  <!-- tree view -->
+  <record id="watering_schedule_tree_view" model="ir.ui.view">
+    <field name="name">watering.schedule.tree.view</field>
+    <field name="model">watering.schedule</field>
+    <field name="arch" type="xml">
+       <tree>
+         <field name="plant_ID"/>
+         <field name="watering_date"/>
+         <field name="frequency"/>
+         
+       </tree>
+    </field>
+  </record>
+  <!-- form view -->
+  <record id="watering_schedule_form_view" model="ir.ui.view">
+    <field name="name">watering.schedule.form view</field>
+    <field name="model">watering.schedule</field>
+    <field name="arch" type="xml">
+      <form >
+        <sheet>
+          <group>
+            <field name="plant_ID"/>
+            <field name="watering_date"/>
+            <field name="frequency"/>
+            <field name="date_of_planting"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+</odoo>

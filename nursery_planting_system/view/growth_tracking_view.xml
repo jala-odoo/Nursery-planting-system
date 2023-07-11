@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <record id="growth_tracking_action" model="ir.actions.act_window">
+      <field name="name">Growth Model</field>
+      <field name="res_model">growth.tracking</field>
+      <field name="view_mode">tree,form</field>
+   </record>
+   <!-- tree view -->
+   <record id="growth_tracking_tree_view" model="ir.ui.view">
+      <field name="name">growth.tracking.tree.view</field>
+      <field name="model">growth.tracking</field>
+      <field name="arch" type="xml">
+         <tree>
+         </tree>
+         
+      </field>
+   </record>
+</odoo>
