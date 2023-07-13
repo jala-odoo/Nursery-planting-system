@@ -6,7 +6,7 @@ class GrowthTrackingModel(models.Model):
     _description="track the growth of the plants"
     _order = "plant_ID desc"
 
-    plant_ID=fields.Text(string="Plant ID")
+    plant_ID=fields.Char(string="Plant ID")
     curr_height = fields.Float(string="Current height")
     curr_width = fields.Float(string="Current width")
     health_status = fields.Selection([('H','healthy'),('UH','unhealthy'),('NW','Need Water')],string="Health Status")

@@ -5,10 +5,10 @@ class PlantModel(models.Model):
     _name = "plant.model"
     _description = "describe plant properties"
     _log_access = False
-    _order = "plant_ID desc"
+    _order = "plant_ID asc"
 
     plant_ID = fields.Char(string="Plant ID",required=True)
-    name = fields.Char(string="Name")
+    name = fields.Char(string="Name",default="Beautiful Plant")
     scientific_name = fields.Char(string="Scientific Name")
     type = fields.Char(string="Type")
     species = fields.Char(string="Species",default="Unknown")
@@ -18,8 +18,9 @@ class PlantModel(models.Model):
     date_of_planting = fields.Datetime(string="Date of planting",default = lambda self:fields.Datetime.today()+relativedelta(days=-7))
     ready_for_sold = fields.Boolean(string="Ready for sold")
     shipping_price = fields.Float(string="Shipping Price")
+    sequence = fields.Integer(string="sequence")
 
-    total_amount = fields.Float(string="Total Area",compute="_total_amount",readonly=False)
+    total_amount = fields.Float(string="Total amount",compute="_total_amount",readonly=False)
 
     # relational fields
     watering_date_ids = fields.One2many("watering.schedule" ,"plant_ID",string="upcoming events")

@@ -4,7 +4,8 @@
       <menuitem id="nursery_planting_first_level_menu" name="Plant Properties">
          <menuitem id="nursery_planting_second_level_menu" name="view plant types" action="plant_model_action"/>
       </menuitem>
-      <menuitem id="menu_set_up" name="menu set up" action="plant_model_action">
+      <menuitem id="menu_set_up" name="Settings" >
+         <menuitem id="menu_set_up_first_level" name="Inventory Management" action="inventory_model_action"/>
       </menuitem>
    </menuitem>
 </odoo>

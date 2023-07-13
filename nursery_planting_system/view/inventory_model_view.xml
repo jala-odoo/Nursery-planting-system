@@ -16,4 +16,15 @@
         </tree>
       </field>
    </record>
+   <!-- form view -->
+   <record id="inventory_model_form_view" model="ir.ui.view">
+      <field name="name">inventory.model.form.view</field>
+      <field name="model">inventory.model</field>
+      <field name="arch" type="xml">
+         <form string="inventory managment">
+            <field name="plant_ID"/>
+            <field name="quantity"/>
+         </form>
+      </field>
+   </record>
 </odoo>
