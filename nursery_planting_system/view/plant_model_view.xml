@@ -10,7 +10,7 @@
     <field name="name">plant.model.tree.view</field>
     <field name="model">plant.model</field>
     <field name="arch" type="xml">
-      <tree string="plant properties">
+      <tree string="plant properties" >
         <field name="plant_ID"/>
         <field name="name"/>   
         <field name="type"/>
@@ -36,6 +36,7 @@
           </group>
           <group>
              <field name="price"/> 
+             <field name="shipping_price"/>
           </group>
          </group>
           <notebook>
@@ -49,10 +50,13 @@
                 <field name="price"/>
                 <field name="health_status"/>
                 <field name="expected_harvest_date"/>
+                <field name="ready_for_sold"/>
+                <field name="total_amount"/>
                 <field name="date_of_planting"/>
+                <field name="buyer_id"/>
               </group>
              </page>
-             <page string="watering schedule">
+             <page string="Watering schedule">
                <field name="watering_date_ids"/>
                <!-- <field name="health_status_ids"/> -->
              </page>

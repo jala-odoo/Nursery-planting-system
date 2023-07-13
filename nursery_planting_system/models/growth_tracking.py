@@ -4,6 +4,7 @@ from dateutil.relativedelta import relativedelta
 class GrowthTrackingModel(models.Model):
     _name="growth.tracking"
     _description="track the growth of the plants"
+    _order = "plant_ID desc"
 
     plant_ID=fields.Text(string="Plant ID")
     curr_height = fields.Float(string="Current height")
