@@ -7,8 +7,8 @@ class WateringSchedule(models.Model):
     _log_access=False
     _order = "watering_date asc"
 
-    plant_ID = fields.Many2one ("plant.model" ,string="Plant ID")
+    plant_ID = fields.Many2one("plant.model", string = "Plant ID")
     watering_date = fields.Date(string="Watering_date")
-    frequency = fields.Char(string="Frequency")
+    qunatity = fields.Float(string="qunatity(in litres)")
     date_of_planting = fields.Datetime(string="Date of planting",default = lambda self:fields.Datetime.today()+relativedelta(days=-7),copy=False)
 

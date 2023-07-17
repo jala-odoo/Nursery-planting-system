@@ -11,8 +11,7 @@
       <field name="model">growth.tracking</field>
       <field name="arch" type="xml">
          <tree>
-         </tree>
-         
+         </tree>  
       </field>
    </record>
 </odoo>

@@ -11,8 +11,8 @@
       <field name="model">inventory.model</field>
       <field name="arch" type="xml">
         <tree string="plant in stock">
-          <field name="plant_ID"/>
-          <field name="quantity"/>
+         <field name="plant_ID"/>
+         <field name="quantity"/>
         </tree>
       </field>
    </record>

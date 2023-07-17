@@ -25,11 +25,25 @@ class PlantModel(models.Model):
     # relational fields
     watering_date_ids = fields.One2many("watering.schedule" ,"plant_ID",string="upcoming events")
     # health_status_ids = fields.One2many("growth.tracking","health_status")
-    buyer_id = fields.Many2one("res.partner",string="buyer",readonly=False)
+    buyer_id = fields.Many2one("res.partner",string="buyer")
+
+
+    _sql_constraints = [('check_price','CHECK (price > 0)','The price must be strictly positive.'),
+                        ('check_shipping_price','CHECK (shipping_price > 0)','The shipping price must be strictly positive.')]
+
 
     @api.depends("price","shipping_price")
     def _total_amount(self):
         for y in self:
             y.total_amount = y.price + y.shipping_price
           
+    def sold_button(self):
+        for y in self:
+            y.name="sold"
+        return True
+    
+    def cancel_button(self):
+        for y in self:
+            y.name="cancel"
+        return True
 

@@ -11,9 +11,8 @@
     <field name="model">watering.schedule</field>
     <field name="arch" type="xml">
        <tree string="Watering Schedule" editable="top">
-         <field name="plant_ID"/>
          <field name="watering_date"/>
-         <field name="frequency"/>
+         <field name="qunatity"/>  
        </tree>
     </field>
   </record>
@@ -26,8 +25,8 @@
         <sheet>
           <group>
             <field name="watering_date" widgets="many2many_tags"/>
-            <field name="frequency"/>
-            <field name="date_of_planting"/>
+            <field name="qunatity"/> 
+            <field name="date_of_planting"/> 
           </group>
         </sheet>
       </form>
