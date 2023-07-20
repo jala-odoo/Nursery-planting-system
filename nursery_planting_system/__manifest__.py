@@ -3,7 +3,7 @@
     'author' : "jala",
     'version' : '1.0',
 
-    'depends' : [],
+    'depends' : ['base','mail'],
     'application' : True,
 
     'data' : [

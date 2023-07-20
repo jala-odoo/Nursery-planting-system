@@ -5,12 +5,13 @@ class PlantModel(models.Model):
     _name = "plant.model"
     _description = "describe plant properties"
     _log_access = False
-    _order = "plant_ID asc"
+    _inherit = ['mail.thread','mail.activity.mixin']
+    _order = "price"
 
     plant_ID = fields.Char(string="Plant ID",required=True)
     name = fields.Char(string="Name",default="Beautiful Plant")
     scientific_name = fields.Char(string="Scientific Name")
-    type = fields.Char(string="Type")
+    type = fields.Selection([('Flowering','flowering plant'),('Fruiting','fruiting plant'),('Medicinal','medicinal plant'),('Vegetable','vegetable plant')],default="None",string="Type")
     species = fields.Char(string="Species",default="Unknown")
     price = fields.Float(string="Price")
     expected_harvest_date = fields.Datetime(string="Expected harvest date")
