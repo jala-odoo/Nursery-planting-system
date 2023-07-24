@@ -9,6 +9,6 @@ class WateringSchedule(models.Model):
 
     plant_ID = fields.Many2one("plant.model", string = "Plant ID")
     watering_date = fields.Date(string="Watering_date")
-    qunatity = fields.Float(string="qunatity(in litres)")
+    quantity = fields.Float(string="quantity(in litres)")
     date_of_planting = fields.Datetime(string="Date of planting",default = lambda self:fields.Datetime.today()+relativedelta(days=-7),copy=False)
 

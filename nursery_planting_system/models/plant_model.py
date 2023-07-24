@@ -20,11 +20,12 @@ class PlantModel(models.Model):
     ready_for_sold = fields.Boolean(string="Ready for sold")
     shipping_price = fields.Float(string="Shipping Price")
     sequence = fields.Integer(string="sequence")
-
+    color = fields.Integer(string="color")
+    
     total_amount = fields.Float(string="Total amount",compute="_total_amount",readonly=False)
 
     # relational fields
-    watering_date_ids = fields.One2many("watering.schedule" ,"plant_ID",string="upcoming events")
+    watering_date_ids = fields.One2many("watering.schedule" ,"plant_ID" ,string="watering date")
     # health_status_ids = fields.One2many("growth.tracking","health_status")
     buyer_id = fields.Many2one("res.partner",string="buyer")
 

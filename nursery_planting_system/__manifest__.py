@@ -8,10 +8,13 @@
 
     'data' : [
        'security/ir.model.access.csv',
+       'wizards/nursery_wizards.xml',
        'view/plant_model_view.xml',
        'view/watering_schedule_view.xml',
        'view/inventory_model_view.xml',
        'view/growth_tracking_view.xml',
        'view/nursery_menus.xml',
+       'report/nursery_reports.xml',
+       'report/nursery_templates.xml',
     ]
 }

@@ -11,11 +11,14 @@
     <field name="name">plant.model.tree.view</field>
     <field name="model">plant.model</field>
     <field name="arch" type="xml">
+      <header>
+        <button name="%(nursery_planting_system.nursery_wizard_action)d" string="Add Date" type="action" class="btn-primary"/>
+      </header>
       <tree string="plant properties" >
         <field name="sequence" widget="handle"/>
         <field name="plant_ID"/>
         <field name="name"/>   
-        <field name="type"/>
+        <field name="type" />
         <field name="species"/>
         <field name="price"/>
       </tree>
@@ -28,7 +31,7 @@
     <field name="arch" type="xml">
       <form string="form view">
         <header>
-          <button name = "sold_button" type="object" string="Sold"/>
+          <button name="sold_button" type="object" string="Sold"/>
           <button name="cancel_button" type="object" string="Cancel"/>
         </header>
         <sheet>
@@ -56,7 +59,7 @@
                 <field name="price"/>
                 <field name="health_status"/>
                 <field name="expected_harvest_date"/>
-                <field name="ready_for_sold"/>
+                <field name="ready_for_sold" attrs="{'invisible' : [('health_status','!=','H')]}" />
                 <field name="total_amount"/>
                 <field name="date_of_planting"/>
                 <field name="buyer_id"/>
@@ -66,7 +69,9 @@
               <field name="watering_date_ids"/>
              </page>
              <page string="Other Info">
-              <field name="buyer_id"/>
+              <group>
+                <field name="buyer_id"/>
+              </group>
              </page>
           </notebook>
         </sheet>
@@ -83,7 +88,7 @@
     <field name="name">plant.model.kanban.view</field>
     <field name="model">plant.model</field>
     <field name="arch" type="xml">
-      <kanban default_group_by="type">
+      <kanban default_group_by="type" records_draggable="1">
         <templates>
           <t t-name="kanban-box">
             <div class="oe_kanban_global_click">
@@ -92,7 +97,7 @@
                   <field name="name"/>
                 </strong>
               </div>
-              <div>
+              <div t-if="record.type.raw_value!='None'">
                 Type:
                 <field name="type"/>
               </div>

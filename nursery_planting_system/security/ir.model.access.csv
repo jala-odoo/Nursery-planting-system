@@ -3,3 +3,4 @@ access_plant_model,access_plant_model,model_plant_model,base.group_user,1,1,1,1
 access_inventory_model,access_inventory_model,model_inventory_model,base.group_user,1,1,1,1
 access_growth_tracking,access_growth_tracking,model_growth_tracking,base.group_user,1,1,1,1
 access_watering_schedule,access_watering_schedule,model_watering_schedule,base.group_user,1,1,1,1
+access_nursery_wizards,access_nursery_wizards,model_nursery_wizards,base.group_user,1,1,1,1

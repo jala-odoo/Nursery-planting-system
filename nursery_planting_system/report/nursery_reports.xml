@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="nursery_report" model="ir.actions.report">
+        <field name="name">Nursery Report</field>
+        <field name="model">plant.model</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">nursery_planting_system.nursery_plant_report</field>
+        <field name="report_file">nursery_planting_system.nursery_plant_report</field>
+        <field name="print_report_name">'Plant Details'</field>
+        <field name="binding_model_id" ref="model_plant_model"></field>
+    </record>
+</odoo>
