@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="watering_schedule_demo_data" model="watering.schedule">
+        <field name="plant_ID" ref="plant_model_demo_data"></field>
+        <field name="watering_date">2023-08-27</field>
+        <field name="quantity">1</field>
+        <field name="date_of_planting">2022-12-27</field>
+    </record>
+    <record id="watering_schedule_demo_data1" model="watering.schedule">
+        <field name="plant_ID" ref="plant_model_demo_data1"></field>
+        <field name="watering_date">2023-09-23</field>
+        <field name="quantity">0.7</field>
+        <field name="date_of_planting">2022-05-30</field>
+    </record>
+</odoo>

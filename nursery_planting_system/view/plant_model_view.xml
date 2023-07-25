@@ -11,10 +11,10 @@
     <field name="name">plant.model.tree.view</field>
     <field name="model">plant.model</field>
     <field name="arch" type="xml">
-      <header>
-        <button name="%(nursery_planting_system.nursery_wizard_action)d" string="Add Date" type="action" class="btn-primary"/>
-      </header>
       <tree string="plant properties" >
+        <header>
+          <button name="%(nursery_planting_system.nursery_wizard_action)d" string="Add Date" type="action" class="btn-primary"/>
+        </header>
         <field name="sequence" widget="handle"/>
         <field name="plant_ID"/>
         <field name="name"/>   

@@ -3,7 +3,7 @@
     'author' : "jala",
     'version' : '1.0',
 
-    'depends' : ['base','mail'],
+    'depends' : ['base','mail','web'],
     'application' : True,
 
     'data' : [
@@ -16,5 +16,10 @@
        'view/nursery_menus.xml',
        'report/nursery_reports.xml',
        'report/nursery_templates.xml',
-    ]
+    ],
+
+    'demo':[
+        'demo/plant_demo.xml',
+        'demo/watering_schedule_demo.xml',
+    ],
 }

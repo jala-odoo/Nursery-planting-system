@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="plant_model_demo_data" model="plant.model">
+            <field name="plant_ID">P2703</field>
+            <field name="name">Sunflower</field>
+            <field name="scientific_name">Helianthus</field>
+            <field name="type">Flowering</field>
+            <field name="species">herbaceous</field>
+            <field name="price">270</field>
+            <field name="expected_harvest_date">2023-12-27</field>
+            <field name="health_status">H</field>
+            <field name="date_of_planting">2022-08-03</field>
+            <field name="ready_for_sold">True</field>
+            <field name="shipping_price">120</field>
+            <!-- <field name="watering_date_ids" ref="watering_schedule_demo_data"></field> -->
+        </record>
+        <record id="plant_model_demo_data1" model="plant.model">
+            <field name="plant_ID">P0308</field>
+            <field name="name">Rose</field>
+            <field name="scientific_name">Rosa</field>
+            <field name="type">Flowering</field>
+            <field name="species">perennial shrubs</field>
+            <field name="price">228</field>
+            <field name="expected_harvest_date">2023-08-22</field>
+            <field name="health_status">H</field>
+            <field name="date_of_planting">2022-08-03</field>
+            <field name="ready_for_sold">True</field>
+            <field name="shipping_price">22</field>
+            <!-- <field name="watering_date_ids" ref="watering_schedule_demo_data1"></field> -->
+        </record>
+    </data>
+</odoo>

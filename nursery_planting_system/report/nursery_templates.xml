@@ -1,17 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<odoo> 
     <template id="nursery_plant_report">
         <t t-foreach="docs" t-as="details">
             <t t-call="web.html_container">
                 <t t-call="web.external_layout">
                    <div class="page">
-                    <div>
-                      <strong>Plant ID:</strong>
-                      <span t-field="details.plant_ID"/>
-                    </div>
+                       <div>
+                          <strong>Plant ID:</strong>
+                          <span t-field="details.plant_ID"/>
+                       </div>
+                       <h1>
+                          <span t-field="details.name"/>
+                       </h1>
+                       <t t-call="nursery_planting_system.nursery_plant_report1"/>
                    </div>
                 </t>
             </t>
         </t>
     </template>
+    <template id="nursery_plant_report1">
+        <div>
+            <strong>Price:</strong>
+            <span t-field="details.price"/>
+        </div>
+        <div>
+            <strong>Health Status:</strong>
+            <span t-field="details.health_status"/>
+        </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Scientific Name</th>
+                        <th>Species</th>
+                        <th>Total Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach="details" t-as="y">
+                        <td>
+                            <span t-field="y.name"/>
+                        </td>
+                        <td>
+                            <span t-field="y.type"/>
+                        </td>
+                        <td>
+                            <span t-field="y.scientific_name"/>
+                        </td>
+                        <td>
+                            <span t-field="y.species"/>
+                        </td>
+                        <td>
+                            <span t-field="y.total_amount"/>
+                        </td>
+                    </t>
+                </tbody>
+            </table>
+    </template>
+    <!-- <template id="users_report">
+        <t t-foreach="docs" t-as="detail">
+            <t t-call="web.html_cotainer">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>
+                            <strong>Buyer:</strong>
+                            <span t-field="detail.name"/>
+                        </h2>
+                        <t t-call="nursery_planting_system.nursery_plant_report1"/>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template> -->
 </odoo>
